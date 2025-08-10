@@ -1,4 +1,14 @@
 import streamlit as st
+
+import toml
+import os
+
+# Load API key from TOML
+config = toml.load("config.toml")
+HUGGINGFACE_API_KEY = config["api_keys"]["huggingface"]
+os.environ["HUGGINGFACE_API_KEY"] = "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"
+
+
 import os
 import requests
 import json
